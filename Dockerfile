@@ -10,13 +10,13 @@ RUN echo "postfix postfix/mailname string localhost" | debconf-set-selections \
 		cron \
 		curl \
 		nginx \
-		php5-curl \
-		php5-fpm \
-		php5-geoip \
-		php5-imagick \
-		php5-imap \
-		php5-ldap \
-		php5-pgsql \
+		php7-curl \
+		php7-fpm \
+		php7-geoip \
+		php7-imagick \
+		php7-imap \
+		php7-ldap \
+		php7-pgsql \
 		postfix \
 		postgresql-client \
 		unzip \
