@@ -1,7 +1,8 @@
 **Warning:** This image is not maintained anymore. I personally switched to [Wekan](https://wekan.io/).
 
 # viossat/restyaboard
-
+开源程序，基于Restya平台，类似Trello的看板系统
+基于restyaboard 0.6.3的源码
 Open source, Trello like Kanban board, based on Restya platform.
 http://restya.com/board
 
@@ -9,7 +10,7 @@ http://restya.com/board
 
 ```
 restyaboard:
-  image: viossat/restyaboard
+  image: dcempire/restyaboard:0.6.3
   ports:
     - "80:80"
   volumes: # optional
