@@ -4,6 +4,7 @@ MAINTAINER Mathieu Viossat <mathieu@viossat.fr>
 ENV RESTYABOARD_VERSION 0.6.3
 
 RUN echo "postfix postfix/mailname string localhost" | debconf-set-selections \
+	&& echo "deb http://ftp.de.debian.org/debian sid main" >> /etc/apt/sources.list \
 	&& echo "postfix postfix/main_mailer_type string 'Internet Site'" | debconf-set-selections \
 	&& apt-get update && apt-get install -y --no-install-recommends \
 		ca-certificates \
