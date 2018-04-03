@@ -10,6 +10,7 @@ export DB_NAME=${DB_NAME:-${POSTGRES_ENV_POSTGRES_DB:-restyaboard}}
 if [ ! -f /usr/share/nginx/html/server/php/config.inc.php ]; then
   cp /usr/share/nginx/html/server/php/config.inc.php.back /usr/share/nginx/html/server/php/config.inc.php
 fi
+chown -R www-data /usr/share/nginx/html
 chmod -R a+w /usr/share/nginx/html/media /usr/share/nginx/html/client/img /usr/share/nginx/html/tmp/cache /usr/share/nginx/html/server/php/config.inc.php
 
 sed -i "s/^.*'R_DB_HOST'.*$/define('R_DB_HOST', '${DB_HOST}');/g" /usr/share/nginx/html/server/php/config.inc.php
@@ -51,7 +52,7 @@ fi
 set -e
 
 service postfix start
-service php5-fpm start
+service php7.0-fpm start
 service nginx start
 service cron start
 
