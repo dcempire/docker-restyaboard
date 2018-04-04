@@ -2,7 +2,7 @@
 
 # viossat/restyaboard
 开源程序，基于Restya平台，类似Trello的看板系统
-基于restyaboard 0.6.3的源码
+源码从# viossat/restyaboard 扩展而来，采用了restyaboard 0.6.3的源码，PHP 版本从5.0升到了7.0
 Open source, Trello like Kanban board, based on Restya platform.
 http://restya.com/board
 
